@@ -6,12 +6,27 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct ComposableCameraApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CameraView(
+                store: .init(
+                    initialState: CameraState(isRecording: true),
+                    reducer: reducer.debug(),
+                    environment: CameraEnvironment(
+                        cameraClient: .live,
+                        temporaryFileLocation: {
+                            URL(fileURLWithPath: NSTemporaryDirectory())
+                            .appendingPathComponent(UUID().uuidString)
+                            .appendingPathExtension(".mov")
+                            
+                        }
+                    )
+                )
+            )
         }
     }
 }
