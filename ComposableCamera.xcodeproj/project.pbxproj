@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98466A8628BEDFC6002B7A1C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A8528BEDFC6002B7A1C /* TabBar.swift */; };
 		A998D5C728BD2C1E00899878 /* ComposableCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998D5C628BD2C1E00899878 /* ComposableCameraApp.swift */; };
 		A998D5CB28BD2C2400899878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A998D5CA28BD2C2400899878 /* Assets.xcassets */; };
 		A998D5CE28BD2C2400899878 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A998D5CD28BD2C2400899878 /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		98466A8528BEDFC6002B7A1C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		A998D5C328BD2C1E00899878 /* ComposableCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposableCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A998D5C628BD2C1E00899878 /* ComposableCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableCameraApp.swift; sourceTree = "<group>"; };
 		A998D5CA28BD2C2400899878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,9 +50,6 @@
 		A998D5D528BD2C8400899878 /* CameraCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCore.swift; sourceTree = "<group>"; };
 		A998D5DA28BD2CA600899878 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A998D5DC28BD2CAD00899878 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
-		A998D5E828BE54A000899878 /* CameraCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraCore.h; sourceTree = "<group>"; };
-		A998D5E928BE54A000899878 /* CameraCore.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CameraCore.docc; sourceTree = "<group>"; };
-		A998D5F428BE54A100899878 /* CameraCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoreTests.swift; sourceTree = "<group>"; };
 		A998D5FD28BE54C500899878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A998D60328BE551700899878 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				A998D5C528BD2C1E00899878 /* ComposableCamera */,
-				A998D5E728BE54A000899878 /* CameraCore */,
-				A998D5F328BE54A100899878 /* CameraCoreTests */,
 				A998D5C428BD2C1E00899878 /* Products */,
 				A998D60528BE557300899878 /* Frameworks */,
 			);
@@ -91,6 +88,7 @@
 			children = (
 				A998D5FD28BE54C500899878 /* Info.plist */,
 				A998D5C628BD2C1E00899878 /* ComposableCameraApp.swift */,
+				98466A8528BEDFC6002B7A1C /* TabBar.swift */,
 				A998D5D528BD2C8400899878 /* CameraCore.swift */,
 				A998D60328BE551700899878 /* CameraView.swift */,
 				A998D5D928BD2C9D00899878 /* CameraClient */,
@@ -115,23 +113,6 @@
 				A998D5DC28BD2CAD00899878 /* Live.swift */,
 			);
 			path = CameraClient;
-			sourceTree = "<group>";
-		};
-		A998D5E728BE54A000899878 /* CameraCore */ = {
-			isa = PBXGroup;
-			children = (
-				A998D5E828BE54A000899878 /* CameraCore.h */,
-				A998D5E928BE54A000899878 /* CameraCore.docc */,
-			);
-			path = CameraCore;
-			sourceTree = "<group>";
-		};
-		A998D5F328BE54A100899878 /* CameraCoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				A998D5F428BE54A100899878 /* CameraCoreTests.swift */,
-			);
-			path = CameraCoreTests;
 			sourceTree = "<group>";
 		};
 		A998D60528BE557300899878 /* Frameworks */ = {
@@ -222,6 +203,7 @@
 				A998D60D28BE583200899878 /* CameraView.swift in Sources */,
 				A998D60E28BE583200899878 /* CameraCore.swift in Sources */,
 				A998D60F28BE595700899878 /* Client.swift in Sources */,
+				98466A8628BEDFC6002B7A1C /* TabBar.swift in Sources */,
 				A998D61028BE595B00899878 /* Live.swift in Sources */,
 				A998D5C728BD2C1E00899878 /* ComposableCameraApp.swift in Sources */,
 			);
@@ -367,8 +349,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,8 +382,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
