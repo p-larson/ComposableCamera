@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "gsplayer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wxxsw/GSPlayer.git",
+      "state" : {
+        "revision" : "5904551cf33e0c38831fdc56c6a2c9770eadc30d",
+        "version" : "0.2.25"
+      }
+    },
+    {
       "identity" : "swift-case-paths",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-case-paths",
@@ -52,6 +61,15 @@
       "state" : {
         "revision" : "2d6b7ffcc67afd9077fac5e5a29bcd6d39b71076",
         "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "videoplayer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wxxsw/VideoPlayer",
+      "state" : {
+        "revision" : "3c5b9531ee20e34d3a86142ca2c076a5b99afdb2",
+        "version" : "1.2.3"
       }
     },
     {

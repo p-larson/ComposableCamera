@@ -32,17 +32,23 @@ private final actor Camera {
     var delegate: CameraDelegate?
     
     func startFeed(_ session: AVCaptureSession, _ output: AVCaptureVideoDataOutput, _ queue: DispatchQueue) async -> AsyncStream<CGImage> {
-        defer {
-            session.beginConfiguration()
-            
-            output.setSampleBufferDelegate(self.delegate, queue: queue)
-            
+        session.beginConfiguration()
+        
+        output.setSampleBufferDelegate(self.delegate, queue: queue)
+        
+        defer { 
             session.commitConfiguration()
         }
         
         return AsyncStream<CGImage>(bufferingPolicy: .bufferingNewest(1)) { continuation in
             self.delegate = CameraDelegate(continuation: continuation)
         }
+    }
+    
+    func stopFeed(_ session: AVCaptureSession, _ queue: DispatchQueue) {
+        self.delegate?.continuation.finish()
+        
+        session.stopRunning()
     }
 }
 
@@ -62,9 +68,11 @@ private final class RecorderDelegate: NSObject, AVCaptureFileOutputRecordingDele
 private final actor Recorder {
     var delegate: RecorderDelegate?
     
-    func stopRecording(output: AVCaptureFileOutput) -> URL? {
+    func stopRecording(output: AVCaptureFileOutput) throws -> URL {
+        output.stopRecording()
+        
         guard let url = output.outputFileURL else {
-            return nil
+            throw URLError(.badURL)
         }
         
         return url
@@ -102,8 +110,9 @@ extension CameraClient {
                 await camera.startFeed(session, output, queue)
             }, startRecording: { url, movieFileOutput in
                 try await recorder.startRecording(on: url, output: movieFileOutput)
-            }, stopRecording: {
-                return URL(fileURLWithPath: "")
+            }, stopRecording: { session, movieFileOutput, queue in
+                await camera.stopFeed(session, queue)
+                return try await recorder.stopRecording(output: movieFileOutput)
             }
         )
     }

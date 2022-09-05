@@ -14,5 +14,5 @@ struct CameraClient {
     var requestAuthorization: @Sendable () async -> Bool
     var startFeed: @Sendable (AVCaptureSession, AVCaptureVideoDataOutput, DispatchQueue) async -> AsyncStream<CGImage>
     var startRecording: @Sendable (URL, AVCaptureMovieFileOutput) async throws -> Bool
-    var stopRecording: @Sendable () async -> (URL)
+    var stopRecording: @Sendable (AVCaptureSession, AVCaptureMovieFileOutput, DispatchQueue) async throws -> URL
 }

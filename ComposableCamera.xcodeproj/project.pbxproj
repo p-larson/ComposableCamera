@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		98466A8628BEDFC6002B7A1C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A8528BEDFC6002B7A1C /* TabBar.swift */; };
+		98466A8A28C1846D002B7A1C /* FaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A8928C1846D002B7A1C /* FaderView.swift */; };
+		98466A9528C569E7002B7A1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A9428C569E7002B7A1C /* ContentView.swift */; };
+		98466A9728C56A9A002B7A1C /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A9628C56A9A002B7A1C /* VideoPreview.swift */; };
+		98466A9928C56AF8002B7A1C /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A9828C56AF8002B7A1C /* BannerView.swift */; };
+		98466A9B28C56C46002B7A1C /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A9A28C56C46002B7A1C /* ToolBar.swift */; };
+		98466A9D28C56C5C002B7A1C /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A9C28C56C5C002B7A1C /* ToggleButton.swift */; };
+		98466A9F28C56D08002B7A1C /* DetailToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466A9E28C56D08002B7A1C /* DetailToggleButton.swift */; };
+		98466AA128C56F6A002B7A1C /* VideoControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466AA028C56F6A002B7A1C /* VideoControls.swift */; };
+		98466AA428C5733F002B7A1C /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466AA328C5733F002B7A1C /* SwiftUI.swift */; };
+		98466AA628C575C5002B7A1C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466AA528C575C5002B7A1C /* ActionButton.swift */; };
+		98466AAB28C5A3F8002B7A1C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98466AAA28C5A3F8002B7A1C /* AppView.swift */; };
+		98466AAF28C6AB9E002B7A1C /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 98466AAE28C6AB9E002B7A1C /* VideoPlayer */; };
 		A998D5C728BD2C1E00899878 /* ComposableCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998D5C628BD2C1E00899878 /* ComposableCameraApp.swift */; };
 		A998D5CB28BD2C2400899878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A998D5CA28BD2C2400899878 /* Assets.xcassets */; };
 		A998D5CE28BD2C2400899878 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A998D5CD28BD2C2400899878 /* Preview Assets.xcassets */; };
@@ -43,6 +55,17 @@
 
 /* Begin PBXFileReference section */
 		98466A8528BEDFC6002B7A1C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		98466A8928C1846D002B7A1C /* FaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaderView.swift; sourceTree = "<group>"; };
+		98466A9428C569E7002B7A1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98466A9628C56A9A002B7A1C /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
+		98466A9828C56AF8002B7A1C /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		98466A9A28C56C46002B7A1C /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		98466A9C28C56C5C002B7A1C /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		98466A9E28C56D08002B7A1C /* DetailToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailToggleButton.swift; sourceTree = "<group>"; };
+		98466AA028C56F6A002B7A1C /* VideoControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControls.swift; sourceTree = "<group>"; };
+		98466AA328C5733F002B7A1C /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
+		98466AA528C575C5002B7A1C /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		98466AAA28C5A3F8002B7A1C /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		A998D5C328BD2C1E00899878 /* ComposableCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposableCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A998D5C628BD2C1E00899878 /* ComposableCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableCameraApp.swift; sourceTree = "<group>"; };
 		A998D5CA28BD2C2400899878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,12 +83,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				A998D5E028BD2CE700899878 /* ComposableArchitecture in Frameworks */,
+				98466AAF28C6AB9E002B7A1C /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98466AA228C57337002B7A1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98466AA328C5733F002B7A1C /* SwiftUI.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		98466AA728C5A349002B7A1C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				98466A8928C1846D002B7A1C /* FaderView.swift */,
+				98466A9428C569E7002B7A1C /* ContentView.swift */,
+				98466A9828C56AF8002B7A1C /* BannerView.swift */,
+				98466A9A28C56C46002B7A1C /* ToolBar.swift */,
+				98466A9C28C56C5C002B7A1C /* ToggleButton.swift */,
+				98466A9E28C56D08002B7A1C /* DetailToggleButton.swift */,
+				98466A9628C56A9A002B7A1C /* VideoPreview.swift */,
+				98466AA028C56F6A002B7A1C /* VideoControls.swift */,
+				98466AA528C575C5002B7A1C /* ActionButton.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		98466AAC28C5A49C002B7A1C /* AppFeature */ = {
+			isa = PBXGroup;
+			children = (
+				98466AAA28C5A3F8002B7A1C /* AppView.swift */,
+			);
+			path = AppFeature;
+			sourceTree = "<group>";
+		};
 		A998D5BA28BD2C1E00899878 = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +144,10 @@
 			children = (
 				A998D5FD28BE54C500899878 /* Info.plist */,
 				A998D5C628BD2C1E00899878 /* ComposableCameraApp.swift */,
+				98466AAC28C5A49C002B7A1C /* AppFeature */,
 				98466A8528BEDFC6002B7A1C /* TabBar.swift */,
+				98466AA728C5A349002B7A1C /* New Group */,
+				98466AA228C57337002B7A1C /* Extensions */,
 				A998D5D528BD2C8400899878 /* CameraCore.swift */,
 				A998D60328BE551700899878 /* CameraView.swift */,
 				A998D5D928BD2C9D00899878 /* CameraClient */,
@@ -142,6 +201,7 @@
 			name = ComposableCamera;
 			packageProductDependencies = (
 				A998D5DF28BD2CE700899878 /* ComposableArchitecture */,
+				98466AAE28C6AB9E002B7A1C /* VideoPlayer */,
 			);
 			productName = ComposableCamera;
 			productReference = A998D5C328BD2C1E00899878 /* ComposableCamera.app */;
@@ -173,6 +233,7 @@
 			mainGroup = A998D5BA28BD2C1E00899878;
 			packageReferences = (
 				A998D5DE28BD2CE700899878 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				98466AAD28C6AB9E002B7A1C /* XCRemoteSwiftPackageReference "VideoPlayer" */,
 			);
 			productRefGroup = A998D5C428BD2C1E00899878 /* Products */;
 			projectDirPath = "";
@@ -200,12 +261,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98466A9928C56AF8002B7A1C /* BannerView.swift in Sources */,
+				98466A9728C56A9A002B7A1C /* VideoPreview.swift in Sources */,
 				A998D60D28BE583200899878 /* CameraView.swift in Sources */,
+				98466A8A28C1846D002B7A1C /* FaderView.swift in Sources */,
+				98466A9F28C56D08002B7A1C /* DetailToggleButton.swift in Sources */,
+				98466AA128C56F6A002B7A1C /* VideoControls.swift in Sources */,
+				98466A9528C569E7002B7A1C /* ContentView.swift in Sources */,
+				98466AA628C575C5002B7A1C /* ActionButton.swift in Sources */,
 				A998D60E28BE583200899878 /* CameraCore.swift in Sources */,
+				98466AA428C5733F002B7A1C /* SwiftUI.swift in Sources */,
 				A998D60F28BE595700899878 /* Client.swift in Sources */,
+				98466A9D28C56C5C002B7A1C /* ToggleButton.swift in Sources */,
 				98466A8628BEDFC6002B7A1C /* TabBar.swift in Sources */,
+				98466AAB28C5A3F8002B7A1C /* AppView.swift in Sources */,
 				A998D61028BE595B00899878 /* Live.swift in Sources */,
 				A998D5C728BD2C1E00899878 /* ComposableCameraApp.swift in Sources */,
+				98466A9B28C56C46002B7A1C /* ToolBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +495,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		98466AAD28C6AB9E002B7A1C /* XCRemoteSwiftPackageReference "VideoPlayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wxxsw/VideoPlayer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		A998D5DE28BD2CE700899878 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -434,6 +514,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		98466AAE28C6AB9E002B7A1C /* VideoPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98466AAD28C6AB9E002B7A1C /* XCRemoteSwiftPackageReference "VideoPlayer" */;
+			productName = VideoPlayer;
+		};
 		A998D5DF28BD2CE700899878 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A998D5DE28BD2CE700899878 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

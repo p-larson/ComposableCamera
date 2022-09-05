@@ -13,6 +13,7 @@ struct ComposableCameraApp: App {
     var body: some Scene {
         WindowGroup {
             TabBar_Previews.previews
+                .colorScheme(.dark)
 //            CameraView(
 //                store: .init(
 //                    initialState: CameraState(isRecording: true),

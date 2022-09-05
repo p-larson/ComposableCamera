@@ -8,9 +8,9 @@
 import SwiftUI
 import ComposableArchitecture
 
-
 struct MainState: Equatable {
     var currentTab = Tab.explore
+    var camera: CameraState
 }
 
 enum MainAction: Equatable {
@@ -131,12 +131,15 @@ struct MainView: View {
                         )
                     )
                 )
-                default: Spacer()
+                default: ContentView(
+                    store: viewStore.
+                )
                 }
-                TabBar(store: store)
             }
         }
         .edgesIgnoringSafeArea(.bottom)
+        .background(Color.black.edgesIgnoringSafeArea(.all))
+        .statusBar(hidden: false)
     }
 }
 
@@ -144,7 +147,18 @@ struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         MainView(
             store: Store(
-                initialState: MainState(), 
+                initialState: MainState(camera: Store(
+                    initialState: .init(), 
+                    reducer: reducer, 
+                    environment: CameraEnvironment(
+                        cameraClient: .live, 
+                        temporaryFileLocation: {
+                            URL(fileURLWithPath: NSTemporaryDirectory())
+                                .appendingPathComponent(UUID().uuidString)
+                                .appendingPathExtension(".mov")
+                        }
+                    )
+                )), 
                 reducer: mainReducer.debug(), 
                 environment: MainEnvironment()
             )

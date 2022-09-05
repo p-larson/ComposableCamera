@@ -15,6 +15,7 @@ public struct CameraState: Equatable {
     var feed: CGImage?
     var isRecording: Bool = false
     var isBackCamera: Bool = true
+    var currentRecording: URL? = nil
 }
 
 enum CameraAction: Equatable {
@@ -25,6 +26,7 @@ enum CameraAction: Equatable {
     case toggle
     case startRecording
     case endRecording
+    case setCurrentRecording(URL)
 }
 
 struct CameraEnvironment {
@@ -43,17 +45,6 @@ let reducer = Reducer<CameraState, CameraAction, CameraEnvironment> {
     case .startCamera:
         return .run { send in
             let success = await environment.cameraClient.requestAuthorization()
-            
-            // Handle fail
-            
-            //            await send(.authorizationResponse(status))
-            
-            //            print(status)
-            
-            //            guard status == .authorized else {
-            //                return
-            //            }
-            //
             await send(.prepareDevice)
             
             for await frame in await environment.cameraClient.startFeed(environment.session, environment.videoOutput, environment.sessionQueue) {
@@ -165,10 +156,21 @@ let reducer = Reducer<CameraState, CameraAction, CameraEnvironment> {
             let file = environment.temporaryFileLocation()
             let movieFileOutput = environment.movieFileOutput
             let success = try await environment.cameraClient.startRecording(file, movieFileOutput)
+            
+            guard success else {
+                return
+            }
+            
+            await send(.setCurrentRecording(file))
         }
     case .endRecording:
         return .run { send in
             
         }
+    case .setCurrentRecording(let url):
+        
+        state.currentRecording = url
+        
+        return .none
     }
 }
